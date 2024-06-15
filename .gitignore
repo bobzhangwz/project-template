@@ -1,0 +1,6 @@
+.venv
+.devbox
+/pnpm-lock.yaml
+/package.json
+/node_modules/
+.direnv/

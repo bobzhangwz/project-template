@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.10.7/.schema/devbox.schema.json",
+  "packages": [
+    "python@3.12",
+    "python312Packages.pip@latest",
+    "pre-commit@latest",
+    "gitleaks@latest",
+    "nodePackages.pnpm@8.15.3",
+    "cz-cli@4.3.0"
+  ],
+  "env": {
+    "VENV_DIR": ".venv"
+  },
+  "shell": {
+    "init_hook": [
+      "source $VENV_DIR/bin/activate"
+    ],
+    "scripts": {
+      "init": [
+        "pip install -r requirements.txt -q",
+        "if [[ ! -e ./node_modules/cz-git ]]; then commitizen init cz-git --pnpm --save-dev --save-exact --force; fi",
+        "pre-commit install"
+      ],
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ]
+    }
+  }
+}
