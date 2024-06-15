@@ -2,6 +2,7 @@
 
 [![Built with Devbox](https://jetpack.io/img/devbox/shield_galaxy.svg)](https://jetpack.io/devbox/docs/contributor-quickstart/)
 
+This project is a template for init project
 
 ## How to run
 
